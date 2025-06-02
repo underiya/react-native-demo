@@ -12,22 +12,14 @@ import { useColorScheme } from "@/hooks/useColorScheme";
 import { CartProvider } from "@/context/CartContext";
 
 import "../global.css";
-
-export default function RootLayout() {
+function RootLayout() {
   const colorScheme = useColorScheme();
-  const [loaded] = useFonts({
-    SpaceMono: require("../assets/fonts/SpaceMono-Regular.ttf"),
-  });
-
-  if (!loaded) {
-    // Async font loading only occurs in development.
-    return null;
-  }
 
   return (
     <CartProvider>
-      <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
+      <ThemeProvider value={DefaultTheme}>
         <Stack>
+          {/* <Stack.Screen name="index" /> */}
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
           <Stack.Screen name="+not-found" />
         </Stack>
@@ -36,3 +28,4 @@ export default function RootLayout() {
     </CartProvider>
   );
 }
+export default RootLayout;

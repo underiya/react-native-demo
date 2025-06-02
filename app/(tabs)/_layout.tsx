@@ -14,7 +14,7 @@ import {
   User,
 } from "lucide-react-native";
 
-export default function TabLayout() {
+function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
@@ -87,3 +87,4 @@ export default function TabLayout() {
     </Tabs>
   );
 }
+export default TabLayout;

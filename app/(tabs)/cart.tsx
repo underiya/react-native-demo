@@ -16,12 +16,12 @@ import { useCart } from "@/context/CartContext";
 
 export default function CartScreen() {
   const router = useRouter();
-  const { items, updateQuantity, removeFromCart, getTotal, getItemCount } =
-    useCart();
+  // const { items, updateQuantity, removeFromCart, getTotal, getItemCount } =
+  //   useCart();
 
-  const shipping = items.length > 0 ? 15 : 0;
-  const subtotal = getTotal();
-  const total = subtotal + shipping;
+  // const shipping = items.length > 0 ? 15 : 0;
+  // const subtotal = getTotal();
+  // const total = subtotal + shipping;
 
   return (
     <SafeAreaView className="flex-1 bg-gray-100">
@@ -40,7 +40,7 @@ export default function CartScreen() {
         <Text className="text-xl font-bold">Cart</Text>
       </View>
 
-      {items.length === 0 ? (
+      {/* {items.length === 0 ? (
         <View className="items-center justify-center flex-1 p-4">
           <ShoppingCart size={64} color="#ADB5BD" />
           <Text className="mt-4 text-xl font-bold text-center">
@@ -56,25 +56,25 @@ export default function CartScreen() {
             <Text className="font-medium text-white">Start Shopping</Text>
           </TouchableOpacity>
         </View>
-      ) : (
-        <>
-          <ScrollView
+      ) : ( */}
+      <>
+        {/* <ScrollView
             className="flex-1"
             contentContainerStyle={{ padding: 16 }}
             showsVerticalScrollIndicator={false}
-          >
-            {/* Cart Items */}
-            {items.map((item, index) => (
+          > */}
+        {/* Cart Items */}
+        {/* {items.map((item, index) => (
               <CartItem
                 key={`${item.product.id}-${index}`}
                 item={item}
                 onUpdateQuantity={updateQuantity}
                 onRemove={removeFromCart}
               />
-            ))}
+            ))} */}
 
-            {/* Promo Code */}
-            <View
+        {/* Promo Code */}
+        {/* <View
               className="p-4 mb-3 bg-white rounded-xl"
               style={{ elevation: 1 }}
             >
@@ -87,11 +87,11 @@ export default function CartScreen() {
                   <Text className="font-medium text-white">Apply</Text>
                 </TouchableOpacity>
               </View>
-            </View>
+            </View> */}
 
-            {/* Order Summary */}
-            <View
-              className="p-4 bg-white  rounded-xl"
+        {/* Order Summary */}
+        {/* <View
+              className="p-4 bg-white rounded-xl"
               style={{ elevation: 1 }}
             >
               <Text className="mb-3 text-lg font-bold">Order Summary</Text>
@@ -117,16 +117,16 @@ export default function CartScreen() {
                 </Text>
               </View>
             </View>
-          </ScrollView>
+          </ScrollView> */}
 
-          {/* Checkout Button */}
-          <View className="p-4 bg-white ">
+        {/* Checkout Button */}
+        {/* <View className="p-4 bg-white ">
             <TouchableOpacity className="items-center py-3 rounded-lg bg-primary">
               <Text className="text-lg font-bold text-white">Checkout</Text>
             </TouchableOpacity>
-          </View>
-        </>
-      )}
+          </View> */}
+      </>
+      {/* )}  */}
     </SafeAreaView>
   );
 }

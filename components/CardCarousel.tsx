@@ -6,6 +6,9 @@ import Carousel, {
   ICarouselInstance,
   Pagination,
 } from "react-native-reanimated-carousel";
+const img1 = require("@public/img1.jpg");
+const img2 = require("@public/img2.jpg");
+const img3 = require("@public/img3.jpg");
 
 const CardCarousel = () => {
   const progress = useSharedValue<number>(0);
@@ -15,31 +18,31 @@ const CardCarousel = () => {
       id: 1,
       title: "Card 1",
       description: "This is card 1",
-      image: "/img1.jpg",
+      image: img1,
     },
     {
       id: 2,
       title: "Card 2",
       description: "This is card 2",
-      image: "/img3.jpg",
+      image: img2,
     },
     {
       id: 3,
       title: "Card 3",
       description: "This is card 3",
-      image: "/img1.jpg",
+      image: img3,
     },
     {
       id: 4,
       title: "Card 4",
       description: "This is card 4",
-      image: "/img2.jpg",
+      image: img2,
     },
     {
       id: 5,
       title: "Card 5",
       description: "This is card 5",
-      image: "/img3.jpg",
+      image: img3,
     },
   ];
   const onPressPagination = (index: number) => {
@@ -78,7 +81,7 @@ const CardCarousel = () => {
         progress={progress}
         data={cards}
         dotStyle={{ backgroundColor: "rgba(0,0,0,0.2)", borderRadius: 50 }}
-        containerStyle={{ gap: 5 }}
+        containerStyle={{ gap: 5, marginTop: -15 }}
         onPress={onPressPagination}
       />
     </View>
