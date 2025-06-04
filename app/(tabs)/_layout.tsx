@@ -15,15 +15,14 @@ import {
 } from "lucide-react-native";
 
 function TabLayout() {
-  const colorScheme = useColorScheme();
-
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarActiveTintColor: Colors["light"].tint,
         headerShown: false, //heading
         tabBarButton: HapticTab,
         tabBarBackground: TabBarBackground,
+
         tabBarStyle: Platform.select({
           ios: {
             // Use a transparent background on iOS to show the blur effect

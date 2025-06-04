@@ -25,7 +25,13 @@ const Categories = () => {
       name: "Toys & Games",
       image: require("@public/mobile.jpg"),
     },
+    {
+      id: 6,
+      name: "Others",
+      image: require("@public/mobile.jpg"),
+    },
   ];
+
   return (
     <View className="p-5">
       <Text className="mb-2 text-2xl font-bold">Categories</Text>
